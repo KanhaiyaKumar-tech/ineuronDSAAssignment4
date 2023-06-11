@@ -28,11 +28,20 @@ std::vector<int> sortedSquares(const std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = { -4, -1, 0, 3, 10 };
+    //std::vector<int> nums = { -4, -1, 0, 3, 10 };
+
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
 
     std::vector<int> squares = sortedSquares(nums);
 
-    std::cout << "Sorted squares: ";
+    //std::cout << "Sorted squares: ";
     for (int num : squares) {
         std::cout << num << " ";
     }

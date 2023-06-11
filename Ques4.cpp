@@ -15,11 +15,20 @@ int arrayPairSum(const std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = { 1, 4, 3, 2 };
+    //std::vector<int> nums = { 1, 4, 3, 2 };
+
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
 
     int maxSum = arrayPairSum(nums);
 
-    std::cout << "Maximized sum: " << maxSum << std::endl;
+    std::cout  << maxSum << std::endl;
 
     return 0;
 }

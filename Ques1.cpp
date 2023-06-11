@@ -29,13 +29,37 @@ std::vector<int> findCommonElements(const std::vector<int>& arr1, const std::vec
 }
 
 int main() {
-    std::vector<int> arr1 = { 1, 2, 3, 4, 5 };
-    std::vector<int> arr2 = { 1, 2, 5, 7, 9 };
-    std::vector<int> arr3 = { 1, 3, 4, 5, 8 };
+    //std::vector<int> arr1 = { 1, 2, 3, 4, 5 };
+    std::vector<int> arr1;
+    int num;
+    while (std::cin >> num) {
+        arr1.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    //std::vector<int> arr2 = { 1, 2, 5, 7, 9 };
+    std::vector<int> arr2;
+    //int num;
+    while (std::cin >> num) {
+        arr2.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    //std::vector<int> arr3 = { 1, 3, 4, 5, 8 };
+    std::vector<int> arr3;
+    //int num;
+    while (std::cin >> num) {
+        arr3.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
 
     std::vector<int> commonElements = findCommonElements(arr1, arr2, arr3);
 
-    std::cout << "Common elements: ";
+    //std::cout << "Common elements: ";
     for (int num : commonElements) {
         std::cout << num << " ";
     }

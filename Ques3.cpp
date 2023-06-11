@@ -18,7 +18,22 @@ std::vector<std::vector<int>> transposeMatrix(const std::vector<std::vector<int>
 }
 
 int main() {
-    std::vector<std::vector<int>> matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    //std::vector<std::vector<int>> matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+
+    std::vector<std::vector<int>> matrix;
+    int num;
+    std::cout << "Enter the matrix elements row by row (separated by spaces, end each row with -1):" << std::endl;
+
+    while (true) {
+        std::vector<int> row;
+        while (std::cin >> num && num != -1) {
+            row.push_back(num);
+        }
+        if (row.empty()) {
+            break;
+        }
+        matrix.push_back(row);
+    }
 
     std::vector<std::vector<int>> transpose = transposeMatrix(matrix);
 

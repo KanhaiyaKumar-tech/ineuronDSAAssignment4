@@ -14,12 +14,22 @@ std::vector<int> shuffleArray(const std::vector<int>& nums, int n) {
 }
 
 int main() {
-    std::vector<int> nums = { 2, 5, 1, 3, 4, 7 };
-    int n = 3;
+    //std::vector<int> nums = { 2, 5, 1, 3, 4, 7 };
+    int n ;
+
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    std::cin>>n;
 
     std::vector<int> shuffled = shuffleArray(nums, n);
 
-    std::cout << "Shuffled array: ";
+    //std::cout << "Shuffled array: ";
     for (int num : shuffled) {
         std::cout << num << " ";
     }
